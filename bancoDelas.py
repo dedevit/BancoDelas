@@ -46,15 +46,15 @@ class ContaBanco:
          data =datetime.now()
          return f'Tipo conta: {self.especial}. Saque de R${valor_saque}.\nSaldo tual da conta até {data} é de :R${self.saldo}'
 
-      if (self.sexo == 1 and self.saldo >= valor_saque):
+      elif (self.sexo == 1 and self.saldo >= valor_saque):
          print("Cliente não possui conta especial")
          self.saldo -= valor_saque
          saldo_atual = self.saldo
          self.especial = 'Conta comum'
          data =datetime.now()
          return f'Tipo conta: {self.especial}. Saldo da conta até {data} é de :R${saldo_atual}'
-
-      return 'Saldo insuficiente'
+      else:
+        return 'Saldo insuficiente'
    
    def __str__(self):
       return f'Titular: {self.nome },Telefone: {self.telefone}, Renda mensal R${self.renda}, Gênero:{self.sexo},Nº da conta:{self.numero_conta} '
