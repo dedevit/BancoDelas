@@ -38,7 +38,7 @@ class ContaBanco:
    """
    def saque(self,valor_saque):
     
-      if (self.sexo == 0 and self.saldo >= valor_saque or valor_saque <= self.limite ):
+      if ((self.sexo == 0) and (self.saldo >= valor_saque or valor_saque <= self.limite )):
          self.saldo -= valor_saque
          saldo_atual = self.saldo
          self.saldo = saldo_atual
@@ -66,18 +66,13 @@ class ContaEspecial (ContaBanco):
    def __init__(self, nome, telefone, renda_mensal):
       super().__init__(nome, telefone, renda_mensal,0 )
       self.titular = nome
-      self.sexo = 0
-   
-   def saque(self,valor_saque):
-      return ContaBanco.saque(self,valor_saque)
+      
 
 class ContaComun(ContaBanco):  
     def __init__(self, nome, telefone, renda_mensal):
       super().__init__(nome, telefone, renda_mensal,1 )
       self.titular = nome
-      self.sexo = 1
+     
 
-    def saque(self,valor_saque):
-      return ContaBanco.saque(self,valor_saque)
 
        
