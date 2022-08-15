@@ -1,10 +1,7 @@
- git init
- git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/dedevit/BancoDelas.git
-git push -u origin main
+#Instruct The Women
 
-Python 3.1.6
+Idéia básica para um banco para mulheres.
+
+Python 3.10.6
 Bibliotecas:Random e datatime
 
